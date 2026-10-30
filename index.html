@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aula Extra 2: Preposições - Dominando o Espaço e o Movimento</title>
+    
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET E BASE --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* --- TIPOGRAFIA --- */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+            line-height: 1.3;
+        }
+        
+        h2 { 
+            color: #2c3e50; 
+            margin-top: 40px; 
+            margin-bottom: 15px; 
+            font-size: 1.6rem; 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 5px; 
+        }
+
+        h3 { color: #34495e; font-size: 1.3rem; margin-top: 30px; margin-bottom: 15px; border-left: 4px solid #3498db; padding-left: 10px;}
+        h4 { color: #c0392b; font-size: 1.1rem; margin-top: 20px; margin-bottom: 10px; }
+        
+        p, li { font-size: 1rem; margin-bottom: 12px; color: #444; }
+        
+        .emoji-large { font-size: 1.5rem; }
+        .emoji-small { font-size: 1.2rem; }
+
+        /* --- DESTAQUES E CAIXAS --- */
+        .theme-intro, .nota-gramatical, .nota-dica, .secao-exercicios, .extra-task {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid transparent;
+            page-break-inside: avoid;
+        }
+
+        .theme-intro { background-color: #f0f9ff; border-left-color: #3498db; }
+        .nota-dica { background-color: #fffbe6; border-left-color: #f0ad4e; }
+        .nota-gramatical { background-color: #e8f4f8; border-left-color: #27ae60; }
+        .extra-task { background-color: #f5eef8; border-left-color: #9b59b6; }
+        .secao-exercicios { background-color: #fff8e1; border-left-color: #f39c12; }
+
+        .example-word { color: #2980b9; font-weight: 700; }
+        .prep-badge { background-color: #3498db; color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+        
+        /* --- ESTILOS DE IPA E PRONÚNCIA --- */
+        .ipa-symbol {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #f1f1f1;
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #e74c3c;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+        
+        .character-portuguese-phonetics {
+            display: block;
+            color: #27ae60;
+            font-style: italic;
+            font-size: 0.85em;
+            margin-bottom: 6px;
+        }
+
+        /* --- TABELAS --- */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px 15px;
+            font-size: 0.95rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) { background-color: #fafafa; }
+        tr:hover { background-color: #f1f5f9; }
+
+        .details-translation {
+            display: block;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px dashed #ddd;
+            color: #333;
+            font-weight: 500;
+        }
+
+        /* --- BOTÕES --- */
+        .nav-btn {
+            display: block;
+            width: 100%;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 14px;
+            margin: 15px 0 25px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-btn:hover { background-color: #2c3e50; }
+        
+        .audio-btn-inline {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            vertical-align: middle;
+            margin-left: 8px;
+            padding: 5px;
+            transition: transform 0.1s;
+        }
+        .audio-btn-inline:active { transform: scale(0.9); }
+
+        /* --- QUIZ INTERATIVO --- */
+        .quiz-container {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 15px;
+            page-break-inside: avoid;
+        }
+        .quiz-question { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; font-weight: 600; }
+        .quiz-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: 2px solid #e0e0e0;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .quiz-btn:hover:not(:disabled) { border-color: #3498db; background-color: #f0f8ff; }
+        .quiz-btn.correct { background-color: #d4edda; border-color: #28a745; color: #155724; font-weight: bold; }
+        .quiz-btn.incorrect { background-color: #f8d7da; border-color: #dc3545; color: #721c24; }
+        .quiz-feedback { margin-top: 10px; font-size: 0.9rem; font-weight: bold; display: none; }
+
+        /* --- EXERCICIOS GABARITO --- */
+        .fill-in-blank {
+            display: inline-block;
+            min-width: 60px;
+            border-bottom: 2px solid #3498db;
+            margin: 0 5px;
+        }
+
+        details.gabarito {
+            margin-top: 20px;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        details.gabarito summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #2c3e50;
+            padding: 10px;
+            list-style: none;
+        }
+        details.gabarito summary::after { content: " 👇"; float: right;}
+        details.gabarito[open] summary::after { content: " 👆"; }
+        .gabarito-content {
+            padding: 15px;
+            border-top: 1px solid #ddd;
+            color: #555;
+            font-weight: 600;
+        }
+
+        /* --- IMPRESSÃO A4 --- */
+        @media print {
+            body { background-color: #fff; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+            .nav-btn, .audio-btn-inline { display: none !important; }
+            table, tr, .nota-dica, .theme-intro, .extra-task { page-break-inside: avoid; }
+            th { background-color: #ddd !important; color: #000 !important; }
+            * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Botão Navegação Topo -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+        
+        <h1>Aula Extra 2: Dominando o Espaço e o Movimento <span class="emoji-large">🗺️➡️</span><br>
+            <span style="font-size: 0.7em; font-weight: normal; color: #555;">(Mastering Space and Movement: Prepositions)</span>
+        </h1>
+        
+        <div class="theme-intro">
+            <p>Olá! Bem-vindo(a) a esta aula extra especial do <strong>MÉTODO IPA</strong>! <span class="emoji-small">🏙️🚶‍♀️🚗</span></p>
+            <p>Hoje, vamos mergulhar fundo em um dos tópicos mais importantes e, às vezes, confusos do inglês: as <strong>preposições</strong>. Nosso tema será <strong>Deslocamento e Direções na Cidade</strong>. Ao final desta aula, você terá uma compreensão muito mais clara de como descrever onde as coisas estão e para onde elas estão indo. Vamos mapear o caminho para a fluência juntos!</p>
+        </div>
+        
+        <h2>O que é uma Preposição? (What is a Preposition?)</h2>
+        <p>Preposições são pequenas palavras (como <strong>in, on, at, to, from</strong>) que conectam substantivos, pronomes ou frases a outras palavras em uma sentença. Elas são essenciais para mostrar relações de <strong>lugar, tempo, direção e movimento</strong>. Sem elas, as frases perdem o sentido, como se um mapa não tivesse direções.</p>
+        
+        <div class="nota-dica">
+            <h4>🚨 Não Confunda! Preposições vs. Artigos</h4>
+            <p>É comum no início confundir pequenas palavras. Veja a diferença fundamental:</p>
+            <ul style="margin-top: 10px;">
+                <li><strong>Preposição:</strong> Mostra a relação (Onde? Para onde?). Ex: The book is <strong>on</strong> the table.</li>
+                <li><strong>Artigo Definido:</strong> Especifica o item (O, A). Ex: The book is on <strong>the</strong> table.</li>
+                <li><strong>Artigo Indefinido:</strong> Generaliza (Um, Uma). Ex: There is <strong>a</strong> book on the table.</li>
+            </ul>
+        </div>
+
+        <h2>1. Preposições de Lugar: Onde as Coisas Estão?</h2>
+        
+        <h3>1.1. As Três Gigantes: IN, ON, AT</h3>
+        <p>Estas são as preposições de lugar mais comuns. Entender a diferença principal entre elas é um grande passo.</p>
+        <ul>
+            <li><strong>IN (Dentro de, Em):</strong> Usado para espaços fechados, áreas geográficas grandes ou algo contido. Pense em "dentro de um volume".</li>
+            <li><strong>ON (Em cima de, Sobre):</strong> Usado para superfícies, ruas/linhas ou meios de transporte onde você pode andar em pé. Pense em "em contato com uma superfície".</li>
+            <li><strong>AT (Em, No/Na):</strong> Usado para pontos exatos, endereços específicos ou eventos. Pense em "em um ponto no GPS".</li>
+        </ul>
+
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Preposição</th>
+                        <th style="width: 45%;">Frase de Exemplo</th>
+                        <th>IPA, Fonética e Tradução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- IN -->
+                    <tr>
+                        <td><span class="prep-badge">IN</span></td>
+                        <td>The keys are <span class="example-word">in</span> the car. <button class="audio-btn-inline" onclick="playAudio('The keys are in the car.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə kiːz ɑːr ɪn ðə kɑːr/</span><br><span class="character-portuguese-phonetics">(dhã KÍIZ ár în dhã KÁAR)</span><span class="details-translation">As chaves estão no (dentro do) carro.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">IN</span></td>
+                        <td>I live <span class="example-word">in</span> a big city. <button class="audio-btn-inline" onclick="playAudio('I live in a big city.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/aɪ lɪv ɪn ə bɪɡ ˈsɪti/</span><br><span class="character-portuguese-phonetics">(ÁI LÊV în ã BÊG SÍ-ti)</span><span class="details-translation">Eu moro em uma cidade grande.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">IN</span></td>
+                        <td>The map is <span class="example-word">in</span> my bag. <button class="audio-btn-inline" onclick="playAudio('The map is in my bag.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə mæp ɪz ɪn maɪ bæɡ/</span><br><span class="character-portuguese-phonetics">(dhã MÉP êz în mái BÉG)</span><span class="details-translation">O mapa está na minha bolsa.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">IN</span></td>
+                        <td>There are many people <span class="example-word">in</span> the subway. <button class="audio-btn-inline" onclick="playAudio('There are many people in the subway.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðɛr ɑːr ˈmɛni ˈpiːpəl ɪn ðə ˈsʌbweɪ/</span><br><span class="character-portuguese-phonetics">(DHÉR ár MÉ-ni PÍI-põl în dhã SÂB-uêi)</span><span class="details-translation">Há muitas pessoas no metrô.</span></td>
+                    </tr>
+                    <!-- ON -->
+                    <tr>
+                        <td><span class="prep-badge">ON</span></td>
+                        <td>The restaurant is <span class="example-word">on</span> the main street. <button class="audio-btn-inline" onclick="playAudio('The restaurant is on the main street.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə ˈrɛstərɑːnt ɪz ɑːn ðə meɪn striːt/</span><br><span class="character-portuguese-phonetics">(dhã RÉS-ta-rónt êz ón dhã MÊIN STRÍIT)</span><span class="details-translation">O restaurante fica na rua principal.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">ON</span></td>
+                        <td>I am <span class="example-word">on</span> the bus now. <button class="audio-btn-inline" onclick="playAudio('I am on the bus now.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/aɪ æm ɑːn ðə bʌs naʊ/</span><br><span class="character-portuguese-phonetics">(ÁI ém ón dhã BÂS NÁU)</span><span class="details-translation">Eu estou no ônibus agora. (Transportes onde andamos em pé).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">ON</span></td>
+                        <td>The sign is <span class="example-word">on</span> the wall. <button class="audio-btn-inline" onclick="playAudio('The sign is on the wall.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə saɪn ɪz ɑːn ðə wɔːl/</span><br><span class="character-portuguese-phonetics">(dhã SÁIN êz ón dhã UÓL)</span><span class="details-translation">A placa está na parede. (Superfície).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">ON</span></td>
+                        <td>We are walking <span class="example-word">on</span> the sidewalk. <button class="audio-btn-inline" onclick="playAudio('We are walking on the sidewalk.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wiː ɑːr ˈwɔːkɪŋ ɑːn ðə ˈsaɪdwɔːk/</span><br><span class="character-portuguese-phonetics">(UÍI ár UÓ-king ón dhã SÁID-uók)</span><span class="details-translation">Nós estamos andando na calçada.</span></td>
+                    </tr>
+                    <!-- AT -->
+                    <tr>
+                        <td><span class="prep-badge">AT</span></td>
+                        <td>I will meet you <span class="example-word">at</span> the bus stop. <button class="audio-btn-inline" onclick="playAudio('I will meet you at the bus stop.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/aɪ wɪl miːt juː æt ðə bʌs stɑːp/</span><br><span class="character-portuguese-phonetics">(ÁI uêl MÍIT iúu ét dhã BÂS stóp)</span><span class="details-translation">Vou te encontrar no ponto de ônibus. (Ponto exato).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">AT</span></td>
+                        <td>She is waiting <span class="example-word">at</span> the corner. <button class="audio-btn-inline" onclick="playAudio('She is waiting at the corner.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ʃiː ɪz ˈweɪtɪŋ æt ðə ˈkɔːrnər/</span><br><span class="character-portuguese-phonetics">(XÍI êz UÊI-ting ét dhã CÓR-nãr)</span><span class="details-translation">Ela está esperando na esquina.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">AT</span></td>
+                        <td>Turn left <span class="example-word">at</span> the traffic light. <button class="audio-btn-inline" onclick="playAudio('Turn left at the traffic light.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/tɜːrn lɛft æt ðə ˈtræfɪk laɪt/</span><br><span class="character-portuguese-phonetics">(TÊRN LÉFT ét dhã TRÉ-fik láit)</span><span class="details-translation">Vire à esquerda no semáforo.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="prep-badge">AT</span></td>
+                        <td>We arrived <span class="example-word">at</span> the train station. <button class="audio-btn-inline" onclick="playAudio('We arrived at the train station.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wiː əˈraɪvd æt ðə treɪn ˈsteɪʃən/</span><br><span class="character-portuguese-phonetics">(UÍI a-RÁIVD ét dhã TRÊIN stêi-xãn)</span><span class="details-translation">Nós chegamos na estação de trem.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>1.2. Posições e Relações Espaciais</h3>
+        <p>Estas preposições nos ajudam a descrever onde algo está em relação a outra coisa (atrás, na frente, embaixo).</p>
+        
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Preposição</th>
+                        <th style="width: 45%;">Frase de Exemplo</th>
+                        <th>IPA, Fonética e Tradução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="example-word">Behind</span></td>
+                        <td>The park is <span class="example-word">behind</span> the tall building. <button class="audio-btn-inline" onclick="playAudio('The park is behind the tall building.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə pɑːrk ɪz bɪˈhaɪnd ðə tɔːl ˈbɪldɪŋ/</span><br><span class="character-portuguese-phonetics">(dhã PÁARK êz bi-RÁIND dhã TÓL BÍL-ding)</span><span class="details-translation">O parque fica <strong>atrás do</strong> prédio alto.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">In front of</span></td>
+                        <td>The bus stop is <span class="example-word">in front of</span> the museum. <button class="audio-btn-inline" onclick="playAudio('The bus stop is in front of the museum.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə bʌs stɑːp ɪz ɪn frʌnt əv.../</span><br><span class="character-portuguese-phonetics">(dhã BÂS stóp êz în FRÂNT óv...)</span><span class="details-translation">O ponto de ônibus fica <strong>em frente ao</strong> museu.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Next to / By</span></td>
+                        <td>I am standing <span class="example-word">next to</span> the phone booth. <button class="audio-btn-inline" onclick="playAudio('I am standing next to the phone booth.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/aɪ æm ˈstændɪŋ nɛkst tə.../</span><br><span class="character-portuguese-phonetics">(ÁI ém STÉN-ding NÉKST tu...)</span><span class="details-translation">Estou em pé <strong>ao lado da</strong> cabine telefônica.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Between</span></td>
+                        <td>The pharmacy is <span class="example-word">between</span> the bank and the market. <button class="audio-btn-inline" onclick="playAudio('The pharmacy is between the bank and the market.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz bɪˈtwiːn ðə bæŋk ænd.../</span><br><span class="character-portuguese-phonetics">(êz bi-TUÍIN dhã BÉNK énd...)</span><span class="details-translation">A farmácia fica <strong>entre</strong> o banco e o mercado.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Among</span></td>
+                        <td>He was lost <span class="example-word">among</span> the crowd. <button class="audio-btn-inline" onclick="playAudio('He was lost among the crowd.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hiː wəz lɔːst əˈmʌŋ ðə kraʊd/</span><br><span class="character-portuguese-phonetics">(RÍI uóz LÓST a-MÂNG dhã CRÁUD)</span><span class="details-translation">Ele estava perdido <strong>no meio da (entre a)</strong> multidão.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Under</span></td>
+                        <td>The cat is sleeping <span class="example-word">under</span> the car. <button class="audio-btn-inline" onclick="playAudio('The cat is sleeping under the car.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz ˈsliːpɪŋ ˈʌndər ðə kɑːr/</span><br><span class="character-portuguese-phonetics">(êz SLÍI-ping ÂN-dãr dhã KÁAR)</span><span class="details-translation">O gato está dormindo <strong>debaixo do</strong> carro.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Above / Over</span></td>
+                        <td>A helicopter is flying <span class="example-word">above</span> the city. <button class="audio-btn-inline" onclick="playAudio('A helicopter is flying above the city.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz ˈflaɪɪŋ əˈbʌv ðə ˈsɪti/</span><br><span class="character-portuguese-phonetics">(êz FLÁI-ing a-BÂV dhã SÍ-ti)</span><span class="details-translation">Um helicóptero está voando <strong>sobre (acima da)</strong> cidade.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Below</span></td>
+                        <td>The subway station is <span class="example-word">below</span> the ground. <button class="audio-btn-inline" onclick="playAudio('The subway station is below the ground.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə ˈsteɪʃən ɪz bɪˈloʊ ðə ɡraʊnd/</span><br><span class="character-portuguese-phonetics">(dhã STÊI-xãn êz bi-LÔU dhã GRÁUND)</span><span class="details-translation">A estação de metrô fica <strong>abaixo do</strong> solo.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Inside / Outside</span></td>
+                        <td>It's warm <span class="example-word">inside</span> the building, but cold <span class="example-word">outside</span>. <button class="audio-btn-inline" onclick="playAudio('It\'s warm inside the building, but cold outside.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪnˈsaɪd... ˌaʊtˈsaɪd/</span><br><span class="character-portuguese-phonetics">(în-SÁID... áut-SÁID)</span><span class="details-translation">Está quente <strong>do lado de dentro</strong> do prédio, mas frio <strong>do lado de fora</strong>.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Near</span></td>
+                        <td>Is there a post office <span class="example-word">near</span> here? <button class="audio-btn-inline" onclick="playAudio('Is there a post office near here?')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ɪz ðɛr ə poʊst ˈɔːfɪs nɪr hɪr/</span><br><span class="character-portuguese-phonetics">(ÊZ dhér ã PÔUST Ó-fês NÍIR ríir?)</span><span class="details-translation">Há um correio <strong>perto</strong> daqui?</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Far from</span></td>
+                        <td>The airport is <span class="example-word">far from</span> the city center. <button class="audio-btn-inline" onclick="playAudio('The airport is far from the city center.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðiː ˈɛrpɔːrt ɪz fɑːr frəm.../</span><br><span class="character-portuguese-phonetics">(dhíi ÉR-pórt êz FÁR fróm...)</span><span class="details-translation">O aeroporto é <strong>longe do</strong> centro da cidade.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Opposite</span></td>
+                        <td>The library is <span class="example-word">opposite</span> the park. <button class="audio-btn-inline" onclick="playAudio('The library is opposite the park.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə ˈlaɪbrəri ɪz ˈɑːpəzɪt ðə pɑːrk/</span><br><span class="character-portuguese-phonetics">(dhã LÁI-bre-ri êz Ó-pô-zêt dhã PÁARK)</span><span class="details-translation">A biblioteca fica <strong>do lado oposto ao (em frente ao)</strong> parque.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>2. Preposições de Movimento: Para Onde as Coisas Vão?</h2>
+        <p>Estas preposições são dinâmicas e descrevem a jornada de um ponto a outro.</p>
+        
+        <div class="table-responsive-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 15%;">Preposição</th>
+                        <th style="width: 45%;">Frase de Exemplo</th>
+                        <th>IPA, Fonética e Tradução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="example-word">To</span></td>
+                        <td>I am going <span class="example-word">to</span> the park. <button class="audio-btn-inline" onclick="playAudio('I am going to the park.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/aɪ æm ˈɡoʊɪŋ tə ðə pɑːrk/</span><br><span class="character-portuguese-phonetics">(ÁI ém GÔU-ing tu dhã PÁARK)</span><span class="details-translation">Eu estou indo <strong>para</strong> o parque. (Destino).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">From</span></td>
+                        <td>He is coming <span class="example-word">from</span> the station. <button class="audio-btn-inline" onclick="playAudio('He is coming from the station.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hiː ɪz ˈkʌmɪŋ frəm ðə ˈsteɪʃən/</span><br><span class="character-portuguese-phonetics">(RÍI êz CÂ-ming fróm dhã STÊI-xãn)</span><span class="details-translation">Ele está vindo <strong>da</strong> estação. (Origem).</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Into / Out of</span></td>
+                        <td>She walked <span class="example-word">into</span> the museum and then got <span class="example-word">out of</span> it. <button class="audio-btn-inline" onclick="playAudio('She walked into the museum and then got out of it.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ˈɪntuː... aʊt əv/</span><br><span class="character-portuguese-phonetics">(ÎN-tu... ÁUT ãv)</span><span class="details-translation">Ela entrou <strong>para dentro do</strong> museu e depois <strong>saiu de dentro</strong> dele.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Across</span></td>
+                        <td>We need to walk <span class="example-word">across</span> the street. <button class="audio-btn-inline" onclick="playAudio('We need to walk across the street.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wiː niːd tə wɔːk əˈkrɔːs ðə striːt/</span><br><span class="character-portuguese-phonetics">(UÍI NÍID tu UÓK a-CRÓS dhã STRÍIT)</span><span class="details-translation">Nós precisamos <strong>atravessar</strong> a rua.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Through</span></td>
+                        <td>The train goes <span class="example-word">through</span> a long tunnel. <button class="audio-btn-inline" onclick="playAudio('The train goes through a long tunnel.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/ðə treɪn ɡoʊz θruː ə lɔːŋ ˈtʌnəl/</span><br><span class="character-portuguese-phonetics">(dhã TRÊIN GÔUZ THRÚU ã LÓNG TÂ-nõl)</span><span class="details-translation">O trem passa <strong>por / através de</strong> um túnel longo.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Along</span></td>
+                        <td>Let's walk <span class="example-word">along</span> the river. <button class="audio-btn-inline" onclick="playAudio('Let\'s walk along the river.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/lɛts wɔːk əˈlɔːŋ ðə ˈrɪvər/</span><br><span class="character-portuguese-phonetics">(LÉTS UÓK a-LÓNG dhã RÍ-vãr)</span><span class="details-translation">Vamos caminhar <strong>ao longo do (beirando o)</strong> rio.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Around</span></td>
+                        <td>He walked <span class="example-word">around</span> the square to find the shop. <button class="audio-btn-inline" onclick="playAudio('He walked around the square to find the shop.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɔːkt əˈraʊnd ðə skwɛr/</span><br><span class="character-portuguese-phonetics">(UÓKT a-RÁUND dhã SKUÉR)</span><span class="details-translation">Ele andou <strong>ao redor da</strong> praça para encontrar a loja.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Towards</span></td>
+                        <td>He is walking <span class="example-word">towards</span> the station. <button class="audio-btn-inline" onclick="playAudio('He is walking towards the station.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/hiː ɪz ˈwɔːkɪŋ təˈwɔːrdz ðə ˈsteɪʃən/</span><br><span class="character-portuguese-phonetics">(RÍI êz UÓ-king tu-ÓRDZ dhã STÊI-xãn)</span><span class="details-translation">Ele está caminhando <strong>em direção à</strong> estação.</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="example-word">Past</span></td>
+                        <td>Walk <span class="example-word">past</span> the bank and turn right. <button class="audio-btn-inline" onclick="playAudio('Walk past the bank and turn right.')">🔊</button></td>
+                        <td><span class="ipa-symbol">/wɔːk pæst ðə bæŋk/</span><br><span class="character-portuguese-phonetics">(UÓK PÉST dhã BÉNK)</span><span class="details-translation">Caminhe <strong>passando pelo (depois do)</strong> banco e vire à direita.</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="extra-task">
+            <h4>Tarefa Extra: Leitura e Compreensão 🧠</h4>
+            <p><strong>Traduza o texto a seguir. Preste atenção em como as preposições descrevem a jornada da pessoa pela cidade.</strong></p>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #eee; color: #333; margin-bottom: 20px;">
+                <p>My day starts early. I live in an apartment on the fifth floor of a tall building. My building is between a small café and a large bookstore. Every morning, I walk out of my building and go towards the subway station, which is just around the corner. I walk along a busy street, and I always pass by a beautiful park on my left.</p>
+                <p>I go down the stairs into the station and wait for the train on the platform. The train travels under the city and through several tunnels. I get off at the central station and walk across a large square. My office is in front of the main library, next to a flower shop. I work at a desk near the window, so I can see the people walking on the sidewalk below.</p>
+                <p>During my lunch break, I usually go to the café opposite my building. I sit at a table outside and read a book for about an hour. After work, I walk from my office to the bus stop. The bus takes me away from the busy downtown area. I get off the bus just before my street and walk the rest of the way. When I get home, I put my keys in a bowl on the table. It feels good to be inside my own space, far from the noise of the city.</p>
+            </div>
+            
+            <!-- Quiz Interativo Moderno -->
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Quiz:</strong> According to the text, where is the narrator's office located?</p>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">A) Behind the central park.</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, true, 'q1')">B) In front of the main library, next to a flower shop.</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">C) Above the subway station.</button>
+                    <button class="quiz-btn" onclick="checkAnswer(this, false, 'q1')">D) At the corner of a quiet street.</button>
+                    <div id="feedback-q1" class="quiz-feedback"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nota-gramatical">
+            <p><strong>🚀 Dicas Práticas para o dia a dia:</strong></p>
+            <ul style="padding-left: 20px;">
+                <li><strong>Descreva seu ambiente:</strong> Olhe ao seu redor. "The lamp is <strong>on</strong> the desk. The chair is <strong>in front of</strong> the desk."</li>
+                <li><strong>Use o GPS:</strong> Configure seu GPS para inglês. Você ouvirá comandos reais como "In 200 meters, turn right <strong>at</strong> the traffic light."</li>
+                <li><strong>Aprenda em blocos (Chunks):</strong> Não decore "at" sozinho. Decore "<strong>at</strong> the corner", "<strong>in</strong> the morning", "<strong>on</strong> the bus". Isso treina seu cérebro automaticamente.</li>
+            </ul>
+        </div>
+
+        <h3>Exercícios Práticos 📝</h3>
+        <div class="secao-exercicios">
+            <h4>Complete as Frases com a Preposição Correta</h4>
+            <p>Escolha a melhor preposição (in, on, at, to, from, under, across, etc.) para completar cada frase.</p>
+            <ol style="padding-left: 30px; margin-top: 15px;">
+                <li>The book is <span class="fill-in-blank"></span> the table.</li>
+                <li>I am going <span class="fill-in-blank"></span> the supermarket.</li>
+                <li>She lives <span class="fill-in-blank"></span> London.</li>
+                <li>Let's meet <span class="fill-in-blank"></span> the cinema entrance.</li>
+                <li>The cat is hiding <span class="fill-in-blank"></span> the bed.</li>
+                <li>He walked <span class="fill-in-blank"></span> the bridge to get to the other side.</li>
+                <li>My apartment is <span class="fill-in-blank"></span> the third floor.</li>
+                <li>We walked <span class="fill-in-blank"></span> the park. (através de / por dentro)</li>
+            </ol>
+        </div>
+        
+        <details class="gabarito">
+            <summary>Ver Gabarito dos Exercícios</summary>
+            <div class="gabarito-content">
+                1. on <br>
+                2. to <br>
+                3. in <br>
+                4. at <br>
+                5. under <br>
+                6. across <br>
+                7. on <br>
+                8. through
+            </div>
+        </details>
+
+        <section id="conclusao" style="margin-top: 40px; text-align: center; border-top: 1px solid #eee; padding-top: 20px;">
+            <h3>Conclusão 🥳</h3>
+            <p>Excelente trabalho! Você navegou por uma das áreas mais importantes da gramática inglesa. Agora você tem as ferramentas para descrever o mundo ao seu redor com muito mais precisão. Continue observando, ouvindo e usando essas direções no seu dia a dia!</p>
+        </section>
+        
+        <!-- Botão Navegação Rodapé -->
+        <button class="nav-btn" onclick="window.location.href='https://espaco-liberdade.github.io/inglesipa/'">⬅ Voltar ao Menu Principal</button>
+    </div>
+
+    <!-- SCRIPT DE ÁUDIO E QUIZ -->
+    <script>
+        // SCRIPT DO ÁUDIO
+        let voices = [];
+        function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+        loadVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) { window.speechSynthesis.onvoiceschanged = loadVoices; }
+
+        function playAudio(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.rate = 0.85; 
+                utterance.pitch = 1;
+
+                if (voices.length === 0) loadVoices();
+                let targetVoice = voices.find(voice => 
+                    (voice.name.includes('Google') || voice.name.includes('Premium') || voice.name.includes('Samantha')) 
+                    && voice.lang.includes('en-US')
+                );
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang === 'en-US');
+                if (!targetVoice) targetVoice = voices.find(voice => voice.lang.startsWith('en'));
+
+                if (targetVoice) { utterance.voice = targetVoice; utterance.lang = targetVoice.lang; } 
+                else { utterance.lang = 'en-US'; }
+                window.speechSynthesis.speak(utterance);
+            } else { alert("Desculpe, seu navegador não suporta reprodução de áudio."); }
+        }
+
+        // SCRIPT DO QUIZ INTERATIVO
+        function checkAnswer(button, isCorrect, questionId) {
+            const questionDiv = button.parentElement;
+            const buttons = questionDiv.querySelectorAll('.quiz-btn');
+            
+            // Desabilita botões após clicar
+            buttons.forEach(btn => btn.disabled = true); 
+            
+            if (isCorrect) {
+                button.classList.add('correct');
+            } else {
+                button.classList.add('incorrect');
+                // Mostra a resposta correta em verde
+                buttons.forEach(btn => {
+                    if (btn.getAttribute('onclick').includes('true')) {
+                        btn.style.border = '2px solid #28a745';
+                        btn.style.color = '#28a745';
+                        btn.style.fontWeight = 'bold';
+                    }
+                });
+            }
+
+            // Mostra o texto de feedback
+            const feedbackDiv = document.getElementById('feedback-' + questionId);
+            feedbackDiv.style.display = 'block';
+            if (isCorrect) {
+                feedbackDiv.innerHTML = "✅ Absolutamente correto! O texto diz: 'My office is in front of the main library, next to a flower shop.'";
+                feedbackDiv.style.color = "#28a745";
+            } else {
+                feedbackDiv.innerHTML = "❌ Incorreto. Releia o segundo parágrafo do texto, focando na frase 'My office is...'";
+                feedbackDiv.style.color = "#dc3545";
+            }
+        }
+    </script>
+</body>
+</html>
